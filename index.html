@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secrets Finder</title>
+    <meta
+      name="description"
+      content="Secrets Finder Maven Plugin: scansione rapida del codice per individuare secret hardcoded."
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --card: #151c33;
+        --text: #e8ecff;
+        --muted: #a8b2d1;
+        --accent: #6ea8fe;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+        background: radial-gradient(circle at top, #1a2450, var(--bg) 55%);
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 56px 20px;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin: 0 0 12px;
+      }
+
+      p {
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .hero {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 16px;
+        padding: 28px;
+      }
+
+      .cta {
+        display: inline-block;
+        margin-top: 16px;
+        padding: 10px 16px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #001233;
+        background: var(--accent);
+        font-weight: 600;
+      }
+
+      .grid {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      code {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        padding: 2px 6px;
+      }
+
+      footer {
+        margin-top: 30px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <h1>Secrets Finder Maven Plugin</h1>
+        <p>
+          Single page ufficiale del progetto. Il plugin analizza il repository e segnala secret
+          hardcoded prima che finiscano in produzione.
+        </p>
+        <a class="cta" href="https://github.com/fabio2js/secrets-finder" target="_blank" rel="noreferrer">
+          Vai al repository
+        </a>
+      </section>
+
+      <section class="grid" aria-label="Funzionalità principali">
+        <article class="card">
+          <h2>Scan ricorsivo</h2>
+          <p>Analizza file e cartelle del progetto in modo automatico.</p>
+        </article>
+        <article class="card">
+          <h2>Pattern predefiniti</h2>
+          <p>Individua API keys, token e password comuni.</p>
+        </article>
+        <article class="card">
+          <h2>Output chiaro</h2>
+          <p>Report leggibile con percorso file e severità del finding.</p>
+        </article>
+      </section>
+
+      <section class="card" style="margin-top: 14px;">
+        <h2>Quick start</h2>
+        <p>Esegui il plugin con Maven:</p>
+        <p><code>mvn com.appshield:secret-finder-maven-plugin:1.0.0-SNAPSHOT:scan</code></p>
+      </section>
+
+      <footer>Pubblicato con GitHub Pages (senza dominio personalizzato).</footer>
+    </main>
+  </body>
+</html>
